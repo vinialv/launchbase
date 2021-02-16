@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body{
+    background: #070731;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+header{
+    padding: 30px;
+    background: rgba(0,0,0,0.15);
+    border-bottom: 1px solid white;
+}
+
+header div{
+    text-align: center;
+}
+
+header div a{
+    margin: 0 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header div a:hover{
+    color: #50fa7b;
+    cursor: pointer;
+    transition: color 650ms;
+}
+
+.perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil img{
+    margin: 35px 35px 50px 0;
+    border-radius: 50%;
+    border: solid 2px #fff;
+}
+
+.perfil h1{
+    font-size: 95px;
+}
+
+.perfil h3{
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.list{
+    margin: 15px 0 100px 0;
+    text-align: center;
+    justify-items: center;
+}
+
+.list ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.list ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 20px;
+    background: cornflowerblue;
+    width: 150px;
+    height: 35px;
+    border-radius: 25px;
+}
+
+footer{
+    text-align: center;
+}
+
+.socialMedia p{
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.socialMedia a{
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 16px;
+    text-decoration: none;
+}
+
+.socialMedia a:hover{
+    color: #50fa7b;
+    cursor: pointer;
+    transition: color 500ms;
+}
