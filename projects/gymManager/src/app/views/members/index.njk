@@ -1,0 +1,49 @@
+{% extends "layout.njk" %}
+{% block content %}
+    <div class="card table-container">
+        <div class="header">
+            <form action="/members" method="GET">
+                <input 
+                    type="text" 
+                    name="filter" 
+                    placeholder="Consulte por nome ou email" 
+                    value={{filter}}
+                >
+                <button type="submit">Filtrar</button>
+            </form>
+        </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Membro</th>
+                        <th>Email</th>
+                        <th>Peso</th>
+                        <th>Altura</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for member in members %}
+                        <tr>
+                            <td>
+                                <span style="background-image: url({{ member.avatar_url }})"></span>
+                                <span>{{ member.name }}</span>
+                            </td>
+                            <td>{{ member.email }}</td>
+                            <td>{{ member.weight }} kg</td>
+                            <td>{{ member.height }} cm</td>
+                            <td>
+                                <a href="/members/{{ member.id }}">Ver</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <a href="/members/create" class="newInstructor">Novo Membro</a>
+            </table>
+            <div class="pagination" 
+                data-page={{pagination.page}}
+                data-total={{pagination.total}} 
+                data-filter={{filter}}
+            ></div>
+        </div>
+    {% endblock content %}
